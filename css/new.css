@@ -1,0 +1,333 @@
+body {
+  font-family: "Exo 2", sans-serif !important;
+  /* font-family: "Montserrat", sans-serif !important; */
+
+}
+
+@font-face {
+  font-family: 'Dax';
+  src: url('/fonts/Dax\ Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+.font-heading{
+  font-family: "Dax", sans-serif !important;
+}
+/* .font-Display{
+  font-family: "Montserrat", sans-serif !important;
+} */
+
+.newBgcolor {
+  /* background: #0D102F !important; */
+  background: #1A1035 !important;
+}
+
+.advTextColor {
+  color: #E767ED;
+  font-weight: 700;
+}
+.advTextColor img{
+  margin-left: 12px;
+}
+
+.imgHeroFirst {
+  width: 100% !important;
+  min-height: 495px !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 1201px) {
+  .imgHeroFirst {
+    min-height: auto !important;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+
+.imgHeroSec {
+  height: 95% !important;
+}
+
+.heroHeadingText {
+  font-weight: 400 !important;
+  font-family: "Dax", sans-serif !important;
+  line-height: 55px !important;
+}
+
+.hero-subtext{
+  background: linear-gradient(92.34deg, #FF8C21 5.05%, #FE4FFF 96.45%);
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: #fff0 !important;
+  font-weight: 700;
+  /* color: transparent !important; */
+}
+
+.subText {
+  font-weight: 200 !important;
+}
+
+.mainText {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.skkilyBlurImg {
+  height: 100% !important;
+}
+
+.downoadAppCTA {
+  color: #311979 !important;
+}
+
+/* navbar */
+.js-nav-dropdown.nav-item {
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+}
+
+.js-nav-dropdown.nav-item a {
+  display: block; /* Ensure the link fills the list item */
+  font-weight: normal; /* Ensure consistent font weight */
+  transition: color 0.3s ease; /* Apply transition for color change */
+}
+
+.js-nav-dropdown a:hover {
+  color: #FF8C21; /* Change text color on hover */
+}
+
+.navFont {
+  background: linear-gradient(92.34deg, #FF8C21 5.05%, #FE4FFF 96.45%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  /* color: #1A1035 !important; */
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.navFont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(60.19deg, rgba(133, 239, 49, 0) 25.73%,
+      rgb(255 255 255 / 40%) 45.27%, rgba(133, 239, 49, 0) 62.27%), rgba(255, 255, 255, 0) !important;
+  animation: moveColor 1.2s linear infinite !important;
+}
+
+@keyframes moveColor {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.border-gradient:hover {
+  border-color: #FF8C21 !important;
+  border-radius: 40px !important;
+}
+
+.app-store-cta:hover{
+  background: linear-gradient(92.34deg, #FF8C21 5.05%, #FE4FFF 96.45%),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)) !important;  
+}
+
+.navHomeMenu:hover .navFirstMenu {
+  border-color: #FF8C21;
+}
+
+.mobile-banner {
+  height: 100%;
+}
+
+.mobile-banner-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.faqbarborder {
+  padding: 10px 32px !important;
+  border: 1px solid white !important;
+}
+@media (max-width: 1024px) {
+  .faqbarborder {
+    padding: 10px 12px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .faqbarborder {
+    font-size: 14px;
+    padding: 5px 6px !important;
+  }
+}
+
+.highlight {
+  color: #E69D08;
+}
+
+@layer utilities {
+  .max-w-38rem {
+    max-width: 38rem;
+  }
+}
+
+.comment-person {
+  font-size: 16px !important;
+}
+
+.comment-subtext {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.install-img3-hover{
+  box-shadow: 0 5px 0 0 #FF6DC5;
+}
+.install-img4-hover{
+  box-shadow: 0 5px 0 0 #B644FC;
+}
+.custom-shadow:hover {
+  box-shadow: 0 16px 24px -8px rgba(182, 68, 252, 0.3) !important;
+}
+.install-process{
+  padding-bottom: 0 !important;
+  margin-bottom: 0;
+}
+
+.slider-img{
+  width: 168px;
+  height: 168px;
+}
+
+.slick-dotted.slick-slider{
+  margin-bottom: 0 !important;
+}
+.slick-next, .slick-prev {
+  right: 1px;
+}
+.slick-next:before, .slick-prev:before{
+  font-size: 30px;
+}
+@media (max-width: 1024px) {
+  .slick-next{
+    right: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .slick-next{
+    right: -25px;
+  }
+}
+.slick-dots li button:before{
+  font-size: 10px;
+}
+.slider{
+  margin: 0 80px;
+}
+@media (max-width: 1024px) {
+  .slider{
+    /* margin: 0; */
+  }
+}
+@media (max-width: 767px) {
+  .slider{
+    /* margin: 0; */
+  }
+}
+.game-title{
+  margin-left: 72px;
+}
+@media (max-width: 1201px) {
+  .game-title{
+    margin-left: 52px;
+  }
+}
+@media (max-width: 1024px) {
+  .game-title{
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .game-title{
+    margin-left: 45px;
+  }
+}
+@media (max-width: 767px) and  (min-width: 600px){
+  .game-title{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 569px) {
+  .game-title{
+    text-align: center;
+    margin-left: 0;
+  }
+}
+.slick-dots {
+  bottom: -40px;
+}
+@media (max-width: 371px) {
+  .slick-dots {
+    bottom: -35px;
+  }
+  .slider {
+    margin: 0 70px;
+  }
+}
+.slick-dots li button:before{
+  color: #c4c5cf;
+}
+.slick-dots li.slick-active button:before{
+  color: #c4c5cf;
+}
+
+/* About page */
+.about-heroSecImg{
+  width: 482px;
+  height: 427px;
+  object-fit: cover;
+}
+/* .aboutSec-img{
+  width: 560px;
+  height: 560px;
+  object-fit: cover;
+} */
+.journey-no{
+  color: rgba(73, 56, 153, 1);
+  font-weight: 800;
+}
+.about-heroSec .hero-animate-fly{
+  left: 45%;
+}
+.about-heroSec .animate-fly{
+  max-width: 130%;
+}
+.refer-earn-tradingIcon{
+  max-width: 85%;
+  right: 8%;
+}
+.aboutPage-aboutSec .aboutImg{
+  max-width: 560px;
+  max-height: 540px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* BLOG PAGE */
+.searchInput{
+  max-width: 440px;
+}
+.blog-section .blog-heading{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+}

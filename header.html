@@ -1,0 +1,166 @@
+<header class="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">
+    <div class="flex items-center px-6 py-6 xl:px-24">
+        <!-- Logo -->
+        <a href="index.html" class="shrink-0">
+            <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Skkily" />
+            <img src="img/Skkily-logo.webp" class="hidden max-h-7 dark:block" alt="Skkily" />
+        </a>
+
+        <!-- Menu / Actions -->
+        <div
+            class="js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto items-center bg-white opacity-0 dark:bg-jacarta-800 lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent">
+            <!-- Mobile Logo / Menu Close -->
+            <div
+                class="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
+                <!-- Mobile Logo -->
+                <a href="index.html" class="shrink-0">
+                    <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Skkily" />
+                    <img src="img/Skkily-logo.webp" class="hidden max-h-7 dark:block" alt="Skkily" />
+                </a>
+
+                <!-- Mobile Menu Close -->
+                <button
+                    class="js-mobile-close group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                    aria-label="close mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Search -->
+            <form action="search" class="relative mt-24 mb-8 w-full lg:hidden">
+            </form>
+
+            <!-- Primary Nav -->
+            <nav class="navbar w-full">
+                <ul class="flex flex-col gap-8 lg:flex-row lg:items-center">
+                    <li class="js-nav-dropdown group relative navHomeMenu"
+                        onclick="window.location.href='index.html';">
+                        <a href="#"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-0 lg:pr-5"
+                            id="navDropdown-1" aria-expanded="false" role="button" data-bs-toggle="dropdown">Home
+                        </a>
+                        <div class="hidden lg:block navFirstMenu border-b border-white w-1/2"></div>
+                    </li>
+                    <li class="js-nav-dropdown group relative">
+                        <a href="/about.html"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent"
+                            id="navDropdown-2" aria-expanded="false" role="button" data-bs-toggle="dropdown">About
+                            Us
+                        </a>
+                    </li>
+                    <li class="js-nav-dropdown nav-item dropdown group relative">
+                        <a href="collections.html"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent"
+                            id="navDropdown-3" aria-expanded="false" role="button" data-bs-toggle="dropdown">Blogs
+                        </a>
+                    </li>
+                    <li class="js-nav-dropdown group relative">
+                        <a href="#"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent"
+                            id="navDropdown-4" aria-expanded="false" role="button" data-bs-toggle="dropdown">Games
+                            <i class="lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-4 w-4 dark:fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
+                                </svg>
+                            </i>
+                        </a>
+                        <ul class="dropdown-menu group-hover:visible lg:invisible left-0 top-[85%] z-10 hidden min-w-[200px] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2"
+                            aria-labelledby="navDropdown-4">
+                            <li>
+                                <a href="help-center.html"
+                                    class="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600">
+                                    <span class="text-sm text-jacarta-700 dark:text-white">Popular Games</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="platform-status.html"
+                                    class="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600">
+                                    <span class="text-sm text-jacarta-700 dark:text-white">New Games</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="partners.html"
+                                    class="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600">
+                                    <span class="text-sm text-jacarta-700 dark:text-white">Upcoming Games</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="js-nav-dropdown nav-item dropdown group relative">
+                        <a href="collections.html"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent"
+                            id="navDropdown-5" aria-expanded="false" role="button"
+                            data-bs-toggle="dropdown">Newsroom
+                        </a>
+                    </li>
+                    <li class="js-nav-dropdown nav-item dropdown group relative">
+                        <a href="collections.html"
+                            class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent"
+                            id="navDropdown-6" aria-expanded="false" role="button" data-bs-toggle="dropdown">Career
+                        </a>
+                    </li>
+                    <li class="group">
+                        <!-- <a href="#"
+                class="flex border-2 border-white rounded-full overflow-hidden py-2 px-8 lg:px-4 lg:py-3.5 items-center justify-center text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:focus:text-accent lg:px-5">Contact</a> -->
+                        <button
+                            class="py-2 px-5 text-white border-2 border-white rounded-full border-gradient">Contact</button>
+                    </li>
+                    <li class="group">
+                        <!-- <a href="#" class="navFont flex items-center justify-center rounded-full overflow-hidden py-2 px-8 lg:px-4 lg:py-3.5 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:focus:text-accent lg:px-5">Download App</a> -->
+                        <button class="navFont py-2 px-5 rounded-full">Download App</button>
+                    </li>
+                    <li class="hidden lg:block flex items-center">
+                        <img src="img/lang.webp" alt="App Icon" class="mr-2" width="22" height="22">
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Connect Wallet / Socials -->
+            <div class="mt-10 w-full lg:hidden">
+                <!-- <a href="#"
+        class="js-wallet block w-full rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
+        data-bs-toggle="modal" data-bs-target="#walletModal">
+        Connect Wallet
+      </a> -->
+
+                <hr class="my-5 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
+
+                <!-- Socials -->
+
+            </div>
+
+            <!-- Actions -->
+        </div>
+
+        <!-- Mobile Menu Actions -->
+        <div class="ml-auto flex lg:hidden">
+            <!-- Profile -->
+            <a href="#"
+                class="group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                aria-label="profile">
+                <img src="img/lang.webp" alt="App Icon"
+                    class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+            </a>
+            <!-- Dark Mode -->
+
+            <!-- Mobile Menu Toggle -->
+            <button
+                class="js-mobile-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                aria-label="open mobile menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>

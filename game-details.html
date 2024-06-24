@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-scheme="dark">
+
+<head>
+    <title>Skkily</title>
+
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Skkily Website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/new.css">
+
+    <!-- Dark Mode JS -->
+    <script src="./js/darkMode.bundle.js"></script>
+
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            display: inline-block;
+            padding: 5px;
+            font-size: 25px;
+            color: #ffc107;
+            cursor: pointer;
+        }
+
+        .rating label:hover,
+        .rating label:hover~label,
+        .rating input:checked~label {
+            color: #ff9800;
+        }
+
+        .score-card {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .progress-bar {
+            margin-bottom: 10px;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #ff9800;
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden font-body text-jacarta-500 newBgcolor" itemscope itemtype="http://schema.org/WebPage">
+    <!-- Header -->
+    <header class="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">
+        <div class="flex items-center px-6 py-6 xl:px-24">
+            <!-- Logo -->
+            <a href="index.html" class="shrink-0">
+                <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Skkily" />
+                <img src="img/Skkily-logo.webp" class="hidden max-h-7 dark:block" alt="Skkily" />
+            </a>
+
+            <!-- Menu / Actions -->
+            <div
+                class="js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto items-center bg-white opacity-0 dark:bg-jacarta-800 lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent">
+                <!-- Mobile Logo / Menu Close -->
+                <div
+                    class="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
+                    <!-- Mobile Logo -->
+                    <a href="index.html" class="shrink-0">
+                        <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Skkily" />
+                        <img src="img/Skkily-logo.webp" class="hidden max-h-7 dark:block" alt="Skkily" />
+                    </a>
+
+                    <!-- Mobile Menu Close -->
+                    <button
+                        class="js-mobile-close group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                        aria-label="close mobile menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Search -->
+                <form action="search" class="relative mt-24 mb-8 w-full lg:hidden">
+                </form>
+
+                <!-- Primary Nav -->
+                <nav class="navbar w-full">
+                    <ul class="flex flex-col gap-8 lg:flex-row lg:items-center">
+                        <li class="js-nav-dropdown group relative" onclick="window.location.href='index.html';">
+                            <a href="index.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white lg:px-0 lg:pr-5"
+                                id="navDropdown-1" aria-expanded="false" role="button" data-bs-toggle="dropdown">Home
+                            </a>
+                        </li>
+                        <li class="js-nav-dropdown group relative" onclick="window.location.href='about.html';">
+                            <a href="about.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white"
+                                id="navDropdown-2" aria-expanded="false" role="button" data-bs-toggle="dropdown">About
+                                Us
+                            </a>
+                        </li>
+                        <li class="js-nav-dropdown nav-item dropdown group relative"
+                            onclick="window.location.href='blog.html';">
+                            <a href="blog.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white"
+                                id="navDropdown-3" aria-expanded="false" role="button" data-bs-toggle="dropdown">Blogs
+                            </a>
+                        </li>
+                        <li class="js-nav-dropdown group relative" onclick="window.location.href='game.html';">
+                            <a href="game.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white"
+                                id="navDropdown-4" aria-expanded="false" role="button" data-bs-toggle="dropdown">Games
+                                <i class="lg:hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 dark:fill-white">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
+                                    </svg>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="js-nav-dropdown nav-item dropdown group relative"
+                            onclick="window.location.href='newsroom.html';">
+                            <a href="newsroom.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white"
+                                id="navDropdown-5" aria-expanded="false" role="button"
+                                data-bs-toggle="dropdown">Newsroom
+                            </a>
+                        </li>
+                        <li class="js-nav-dropdown nav-item dropdown group relative"
+                            onclick="window.location.href='career.html';">
+                            <a href="career.html"
+                                class="dropdown-toggle flex items-center justify-between py-2 text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white"
+                                id="navDropdown-6" aria-expanded="false" role="button" data-bs-toggle="dropdown">Career
+                            </a>
+                        </li>
+                        <li class="group" onclick="window.location.href='contact.html';">
+                            <button
+                                class="py-2 px-5 text-white border-2 border-white rounded-full border-gradient">Contact</button>
+                        </li>
+                        <li class="group">
+                            <button class="navFont py-2 px-5 rounded-full">Download App</button>
+                        </li>
+                        <li class="hidden lg:block flex items-center">
+                            <img src="img/lang.webp" alt="App Icon" class="mr-2" width="22" height="22">
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <!-- Mobile Connect Wallet / Socials -->
+                <div class="mt-10 w-full lg:hidden">
+
+                    <hr class="my-5 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
+
+                    <!-- Socials -->
+
+                </div>
+
+                <!-- Actions -->
+            </div>
+
+            <!-- Mobile Menu Actions -->
+            <div class="ml-auto flex lg:hidden">
+                <!-- Profile -->
+                <a href="#"
+                    class="group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                    aria-label="profile">
+                    <img src="img/lang.webp" alt="App Icon"
+                        class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+                </a>
+                <!-- Dark Mode -->
+
+                <!-- Mobile Menu Toggle -->
+                <button
+                    class="js-mobile-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                    aria-label="open mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-24">
+        <!-- Item -->
+        <section class="relative pt-12 pb-24 lg:py-24">
+            <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
+                <img src="img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+            </picture>
+            <div class="container">
+                <!-- Item -->
+                <div class="md:flex md:flex-wrap">
+                    <!-- Image -->
+                    <figure class="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
+                        <img src="img/products/item_single_large.jpg" alt="item" class="cursor-pointer rounded-2.5xl"
+                            data-bs-toggle="modal" data-bs-target="#imageModal" />
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog !my-0 flex h-full items-center justify-center p-4">
+                                <img src="img/products/item_single_full.jpg" alt="item" />
+                            </div>
+
+                            <button type="button" class="btn-close absolute top-6 right-6" data-bs-dismiss="modal"
+                                aria-label="Close">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-6 w-6 fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- end modal -->
+                    </figure>
+
+                    <!-- Details -->
+                    <div class="md:w-3/5 md:basis-auto md:pl-8 lg:w-1/2 lg:pl-[3.75rem]">
+
+                        <h1 class="mb-4 font-display text-4xl font-semibold text-jacarta-700 dark:text-white">Lorem
+                            ipsum
+                        </h1>
+
+                        <p class="mb-10 dark:text-jacarta-300">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi earum quaerat, consectetur
+                            laborum dolorem ipsam, corrupti molestias nobis atque dicta quas! Vel deleniti dolorem, quos
+                            blanditiis eligendi saepe! Aspernatur, molestiae?
+                        </p>
+
+                        <!-- Bid -->
+                        <div
+                            class="rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
+                            <div class="mb-8 sm:flex sm:flex-wrap">
+                                <!-- Highest bid -->
+
+
+                            </div>
+                        </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#placeBidModal"
+                            class="mt-8 inline-block w-full rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">Place
+                            Bid</a>
+                        <!-- end bid -->
+                    </div>
+                    <!-- end details -->
+                </div>
+            </div>
+        </section>
+        <!-- end item -->
+
+        <!-- Benefits -->
+        <section class="py-12 sm:py-16 md:py-20 lg:py-24">
+            <div class="container">
+                <div class="mx-auto mb-12 max-w-xl text-center">
+                    <h2 class="mb-6 text-center text-3xl font-medium text-jacarta-700 dark:text-white font-heading">
+                        Why Skkily?
+                    </h2>
+                    <p class="text-lg dark:text-jacarta-300">
+                        Discover Skilly - where classic fun meets digital convenience. Get the official download for the
+                        ultimate Skilly experience on your phone, whether for fun or rewards.
+                    </p>
+                </div>
+                <div class="lg:flex lg:flex-nowrap lg:space-x-10">
+                    <div class="lg:w-[55%]">
+                        <!-- tabs -->
+                        <ul class="nav nav-tabs mb-12 space-y-2" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link nav-link--style-2 active group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600"
+                                    id="ownership-tab" data-bs-toggle="tab" data-bs-target="#ownership" type="button"
+                                    role="tab" aria-controls="ownership" aria-selected="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        class="mr-1 h-8 w-8 flex-shrink-0">
+                                        <rect width="32" height="32" fill="url(#pattern0)" />
+                                        <defs>
+                                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                                height="1">
+                                                <use xlink:href="#image0_362_417" transform="scale(0.03125)" />
+                                            </pattern>
+                                            <image id="image0_362_417" width="32" height="32"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKfSURBVFiF7VY9aBRBFP7ezOb2du8SfzpJ4OxF0CIB8QfERivBRqPpBCNCokFCbNQ1WBhRTAwWWloYQdBUNmLhTxEiIRZW2gm2iZ57t3d7M/MsYjTr3d7tnoqFeTDFvvft+z7evJk3wLr970bt/OR5bG34jF4QcgAARunLRrzxPFJ/XcDtIba1wCsAvZEAY14y9g1PUzVNPpFWgCKcriMHAEKfERhMmy9xBbxT7OpScFdKsVMQNRRumI3WZlHmnEHvHpWT5LWSClB+cJCAAa0MdHPoNlMKHgN4kiRvywp4HouCxGilbHaUfd2dJKmbl59sRyx+NLjheWSaYVtWoIdwiBnXbEfAdlK1zLGCxDsAT5uBYitwsb+8C8Tb85usrV1dck8a5lUrFvXr0pL58FVlH956REEjTHwFCM8BcvxlDX+5xa7H214QkO+oaAD3UwlgYMDOyiOZjOhplx0AwlC/11V7Ni7etAknz/IlBq78jgACLp+bovG4eKKuyjqA2wlQvdzl7+snoVjB2k4ygYkEKAXoWsS1BMZYaKMQ2iiAMfZDCK9gdcKpkOgiUrWVtfoJwoGRKXq7BnL95hA/EwLzzLCqlWTkQBuzgIEXI5MRcgDA+WlaBPAybb6mFfD9sE+F0YtMWvGnwi+G3VpF8VZG9LUtAIZcrTniEpKzcXBmzv6Ktwy5bQvIdcq5bN7aH2XBQhzezWcWQCis9UniubYFEImKrD96sQ8OKesfIwRq2pKpm/BP2z8XED8NTwTHLcIZ0SEid5oxJqzVePbqA3cigu8PLlgZHBZCZCL4mgm05jvjM+5MI574HmA+qRi7Ua2fhAQUAExEnTysatiCRu8lQhVAOgFS8KgycnOjGAmub0RBR9mQ3ZBE6KU4nnVbt29LVuYEgw29/QAAAABJRU5ErkJggg==" />
+                                        </defs>
+                                    </svg>
+
+                                    <div>
+                                        <span
+                                            class="mb-2 mt-1 block text-xl font-medium group-hover:text-accent dark:text-white font-heading">Made
+                                            in Bharat</span>
+                                        <div class="nav-link-content hidden">
+                                            <p class="text-jacarta-500 dark:text-jacarta-300">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
+                                                maiores fuga magni
+                                                facilis beatae unde voluptates soluta libero excepturi, tempora
+                                                quibusdam ipsum molestias
+                                                exercitationem modi vel nulla. Animi?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link nav-link--style-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600"
+                                    id="voting-power-tab" data-bs-toggle="tab" data-bs-target="#voting-power"
+                                    type="button" role="tab" aria-controls="voting-power" aria-selected="false">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mr-2 h-8 w-8 flex-shrink-0">
+                                        <circle cx="15.3333" cy="16.6666" r="14.5833" stroke="#7D5AF6"
+                                            stroke-width="1.5" />
+                                        <path
+                                            d="M24.1853 16.5333H23.6758V15.5143C23.6758 14.7035 23.3537 13.9259 22.7803 13.3525C22.207 12.7792 21.4294 12.4571 20.6186 12.4571H16.5425V10.1364C16.931 9.91204 17.2347 9.56578 17.4064 9.15128C17.5781 8.73677 17.6082 8.2772 17.4921 7.84384C17.3759 7.41048 17.1201 7.02754 16.7641 6.75441C16.4082 6.48129 15.9721 6.33325 15.5234 6.33325C15.0748 6.33325 14.6387 6.48129 14.2827 6.75441C13.9268 7.02754 13.6709 7.41048 13.5548 7.84384C13.4387 8.2772 13.4688 8.73677 13.6405 9.15128C13.8122 9.56578 14.1158 9.91204 14.5044 10.1364V12.4571H10.4282C9.61741 12.4571 8.83982 12.7792 8.2665 13.3525C7.69318 13.9259 7.37109 14.7035 7.37109 15.5143V16.5333H6.86157C6.45617 16.5333 6.06737 16.6943 5.78071 16.981C5.49405 17.2677 5.33301 17.6565 5.33301 18.0619C5.33301 18.4673 5.49405 18.8561 5.78071 19.1427C6.06737 19.4294 6.45617 19.5904 6.86157 19.5904H7.37109V20.6095C7.37109 21.4203 7.69318 22.1979 8.2665 22.7712C8.83982 23.3445 9.61741 23.6666 10.4282 23.6666H20.6186C21.4294 23.6666 22.207 23.3445 22.7803 22.7712C23.3537 22.1979 23.6758 21.4203 23.6758 20.6095V19.5904H24.1853C24.5907 19.5904 24.9795 19.4294 25.2661 19.1427C25.5528 18.8561 25.7138 18.4673 25.7138 18.0619C25.7138 17.6565 25.5528 17.2677 25.2661 16.981C24.9795 16.6943 24.5907 16.5333 24.1853 16.5333ZM13.4853 18.0619C13.4853 18.3642 13.3957 18.6597 13.2277 18.9111C13.0598 19.1625 12.821 19.3584 12.5417 19.4741C12.2624 19.5898 11.9551 19.62 11.6586 19.561C11.3621 19.5021 11.0897 19.3565 10.8759 19.1427C10.6621 18.9289 10.5166 18.6566 10.4576 18.3601C10.3986 18.0636 10.4289 17.7562 10.5446 17.4769C10.6603 17.1976 10.8562 16.9589 11.1076 16.7909C11.3589 16.6229 11.6545 16.5333 11.9568 16.5333C12.3622 16.5333 12.751 16.6943 13.0376 16.981C13.3243 17.2677 13.4853 17.6565 13.4853 18.0619ZM20.6186 18.0619C20.6186 18.3642 20.529 18.6597 20.361 18.9111C20.1931 19.1625 19.9543 19.3584 19.675 19.4741C19.3957 19.5898 19.0884 19.62 18.7919 19.561C18.4953 19.5021 18.223 19.3565 18.0092 19.1427C17.7954 18.9289 17.6499 18.6566 17.5909 18.3601C17.5319 18.0636 17.5622 17.7562 17.6779 17.4769C17.7936 17.1976 17.9895 16.9589 18.2408 16.7909C18.4922 16.6229 18.7877 16.5333 19.0901 16.5333C19.4955 16.5333 19.8843 16.6943 20.1709 16.981C20.4576 17.2677 20.6186 17.6565 20.6186 18.0619Z"
+                                            fill="#7D5AF6" />
+                                        <line x1="5.80418" y1="5.40561" x2="22.8042" y2="28.4056" stroke="#7D5AF6"
+                                            stroke-width="2" />
+                                    </svg>
+
+                                    <div>
+                                        <span
+                                            class="mb-2 mt-1 block text-xl font-medium text-jacarta-700 group-hover:text-accent dark:text-white font-heading">No
+                                            bot Certified</span>
+                                        <div class="nav-link-content hidden">
+                                            <p class="text-jacarta-500 dark:text-jacarta-300">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
+                                                maiores fuga magni
+                                                facilis beatae unde voluptates soluta libero excepturi, tempora
+                                                quibusdam ipsum molestias
+                                                exercitationem modi vel nulla. Animi?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link nav-link--style-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600"
+                                    id="rewards-income-tab" data-bs-toggle="tab" data-bs-target="#rewards-income"
+                                    type="button" role="tab" aria-controls="rewards-income" aria-selected="false">
+                                    <svg width="32" height="27" viewBox="0 0 32 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="mr-2 h-8 w-8 flex-shrink-0 fill-accent">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M2.07608 4.07204H25.3461C26.4849 4.07204 27.4184 5.00553 27.4184 6.14439V6.82023H0V6.14439C0 5.00553 0.933489 4.07204 2.07608 4.07204ZM25.7718 12.9365C26.9144 12.9365 27.9524 13.4032 28.7029 14.1537C29.4534 14.9042 29.9202 15.9423 29.9202 17.0849V18.3283C29.9202 18.3582 29.9165 18.3843 29.909 18.4142C30.2002 18.4963 30.4952 18.5859 30.7977 18.6867C31.0105 18.754 31.1636 18.9967 31.1636 19.2244V25.5124C31.1636 25.9642 30.7939 26.3339 30.3421 26.3339H25.7718H21.2014C20.7533 26.3339 20.3837 25.9642 20.3837 25.5124V19.2244C20.3837 18.9967 20.533 18.754 20.7496 18.6867C21.0483 18.5859 21.347 18.4963 21.6383 18.4142C21.6271 18.3843 21.6233 18.3582 21.6233 18.3283V17.0849C21.6233 15.9423 22.0901 14.9042 22.8406 14.1537C23.5949 13.4032 24.6292 12.9365 25.7718 12.9365ZM28.5088 18.0744V17.0849C28.5088 16.3344 28.2026 15.6473 27.706 15.1507C27.2093 14.6578 26.526 14.3479 25.7718 14.3479C25.0212 14.3479 24.3379 14.6578 23.8413 15.1507C23.3447 15.6473 23.0348 16.3344 23.0348 17.0849V18.0744C24.9092 17.6972 26.6343 17.6972 28.5088 18.0744ZM23.789 21.3677L24.9578 22.4916L27.7358 19.6912C27.8553 19.5717 28.0495 19.5717 28.169 19.6874L28.8187 20.3334C28.9382 20.4529 28.9419 20.6471 28.8224 20.7666L25.5141 24.101L25.1743 24.4445C25.0698 24.5491 24.8943 24.5528 24.786 24.4482L24.4425 24.1159L22.7286 22.4655C22.6054 22.3498 22.6016 22.1556 22.7211 22.0324L23.3559 21.3752C23.4716 21.252 23.6658 21.2482 23.789 21.3677ZM4.828 0.733887H28.1017C29.2406 0.733887 30.1741 1.66738 30.1741 2.80997V14.0828C29.9874 13.8102 29.7746 13.5563 29.5393 13.3173C29.1659 12.9439 28.7403 12.6303 28.2847 12.3838V6.14439C28.2847 4.52759 26.9629 3.20577 25.3461 3.20577H2.75566V2.80997C2.75566 1.66738 3.68915 0.733887 4.828 0.733887ZM5.72789 16.3232H11.6798C12.1018 16.3232 12.4453 16.6667 12.4453 17.0886C12.4453 17.5106 12.1018 17.8541 11.6798 17.8541H5.72789C5.30969 17.8541 4.96616 17.5106 4.96616 17.0886C4.96616 16.6667 5.30969 16.3232 5.72789 16.3232ZM3.91692 13.5152H13.8903C14.3123 13.5152 14.6558 13.8587 14.6558 14.2769C14.6558 14.6989 14.3123 15.0424 13.8903 15.0424H3.91692C3.49498 15.0424 3.15146 14.6989 3.15146 14.2769C3.15146 13.8587 3.49498 13.5152 3.91692 13.5152ZM27.4184 10.0277V12.0142C26.8919 11.8424 26.3393 11.7528 25.7718 11.7528C24.3566 11.7528 23.0086 12.3166 22.0079 13.3173C21.0035 14.318 20.4434 15.6697 20.4434 17.0849V17.5442C20.421 17.5479 20.4023 17.5554 20.3799 17.5628C19.6779 17.7943 19.2 18.4888 19.2 19.2244V20.2699H2.07608C0.933489 20.2699 0 19.3365 0 18.1939V10.0277H27.4184Z"
+                                            fill="#7D5AF6" />
+                                    </svg>
+
+
+                                    <div>
+                                        <span
+                                            class="mb-2 mt-1 block text-xl font-medium text-jacarta-700 group-hover:text-accent dark:text-white font-heading">100%
+                                            Secure Payment</span>
+                                        <div class="nav-link-content hidden">
+                                            <p class="text-jacarta-500 dark:text-jacarta-300">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
+                                                maiores fuga magni
+                                                facilis beatae unde voluptates soluta libero excepturi, tempora
+                                                quibusdam ipsum molestias
+                                                exercitationem modi vel nulla. Animi?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link nav-link--style-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600"
+                                    id="complete-decentralization-tab" data-bs-toggle="tab"
+                                    data-bs-target="#complete-decentralization" type="button" role="tab"
+                                    aria-controls="complete-decentralization" aria-selected="false">
+
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="mr-2 h-8 w-8 flex-shrink-0 fill-accent">
+                                        <g clip-path="url(#clip0_322_802)">
+                                            <path
+                                                d="M31.0084 11.52L25.3444 1.98398C24.6724 0.83198 23.4244 0.511984 22.4644 1.08798L7.36039 10.08C6.52839 10.56 6.17639 11.552 6.56039 12.544C5.24839 13.376 3.1044 21.568 3.1044 21.568L1.2484 23.104C0.832402 23.456 0.704402 24.032 0.928402 24.544L4.19239 30.624C4.48039 31.136 5.08839 31.36 5.63239 31.136C6.65639 30.688 8.3524 30.048 9.8884 29.824C11.0724 29.664 12.5444 28.512 12.7684 28.192C13.5364 27.264 21.3124 17.696 21.3124 17.696C22.0804 16.736 21.8884 15.296 20.8644 14.592C19.9364 13.952 18.6564 14.176 17.9204 15.04L14.2404 19.552C13.6644 20.256 12.6084 20.16 12.1604 19.392L10.2404 16.16L26.4004 6.52798L29.6644 12C29.8244 12.288 29.7284 12.672 29.4404 12.864L23.2644 16.544C23.2644 16.576 23.2644 16.576 23.2644 16.608C23.2644 17.088 23.1044 17.568 22.7844 17.952L19.0084 22.592L19.1044 22.752C19.4884 23.456 20.3844 23.68 21.0884 23.296L21.3124 23.168C22.0164 22.784 22.3044 21.952 22.1124 21.216C22.2724 21.28 22.4324 21.28 22.5924 21.28C22.8804 21.28 23.1684 21.216 23.4244 21.056C24.2244 20.608 24.5124 19.552 24.0644 18.752C24.2244 18.816 24.3844 18.816 24.5764 18.816C24.8644 18.816 25.1524 18.752 25.4084 18.592C26.1764 18.176 26.4644 17.216 26.1124 16.448L30.1764 14.048C31.1364 13.504 31.4564 12.256 31.0084 11.52ZM8.7044 13.568L7.84039 12.128C7.64839 11.84 7.7764 11.456 8.0644 11.264L23.1684 2.27197C23.4564 2.11197 23.8404 2.20797 24.0324 2.49597L24.8964 3.93597L8.7044 13.568Z"
+                                                fill="#7D5AF6" />
+                                            <path
+                                                d="M24.0966 13.7919L26.9446 12.0959C27.2326 11.9359 27.3286 11.5519 27.1686 11.2639L26.2086 9.63188C26.0486 9.34388 25.6646 9.24789 25.3766 9.40789L22.5286 11.1039C22.2406 11.2639 22.1446 11.6479 22.3046 11.9359L23.2646 13.5679C23.4246 13.8559 23.8086 13.9519 24.0966 13.7919Z"
+                                                fill="#7D5AF6" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_322_802">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+
+                                    <div>
+                                        <span
+                                            class="mb-2 mt-1 block text-xl font-medium text-jacarta-700 group-hover:text-accent dark:text-white font-heading">One
+                                            click withdrawal</span>
+                                        <div class="nav-link-content hidden">
+                                            <p class="text-jacarta-500 dark:text-jacarta-300">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
+                                                maiores fuga magni
+                                                facilis beatae unde voluptates soluta libero excepturi, tempora
+                                                quibusdam ipsum molestias
+                                                exercitationem modi vel nulla. Animi?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link nav-link--style-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600"
+                                    id="nft-yield-farming-tab" data-bs-toggle="tab" data-bs-target="#nft-yield-farming"
+                                    type="button" role="tab" aria-controls="nft-yield-farming" aria-selected="false">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="mr-2 h-8 w-8 flex-shrink-0 fill-accent">
+                                        <path
+                                            d="M31.1998 18.592C31.1998 16.256 29.7278 14.304 27.6798 13.536V12.608C27.6798 6.17598 22.4318 0.927979 15.9998 0.927979C9.5678 0.927979 4.3198 6.17598 4.3198 12.608V13.536C2.2718 14.304 0.799805 16.288 0.799805 18.592C0.799805 21.568 3.2318 24 6.2078 24H8.1598C8.6718 24 9.0878 23.584 9.0878 23.072V14.112C9.0878 13.6 8.6718 13.184 8.1598 13.184H7.2638V12.608C7.2638 7.77598 11.1998 3.87198 15.9998 3.87198C20.7998 3.87198 24.7358 7.80798 24.7358 12.608V13.184H23.8398C23.3278 13.184 22.9118 13.6 22.9118 14.112V23.072C22.9118 23.584 23.3278 24 23.8398 24H24.2558C23.3278 26.144 21.2798 27.648 18.8478 27.84C18.7198 27.232 18.1758 26.752 17.5038 26.752H14.4638C13.6958 26.752 13.0878 27.36 13.0878 28.128V29.696C13.0878 30.464 13.6958 31.072 14.4638 31.072H17.5038C18.1758 31.072 18.7518 30.592 18.8478 29.92C22.4638 29.728 25.4718 27.264 26.4958 23.936C29.1518 23.584 31.1998 21.312 31.1998 18.592Z"
+                                            fill="#7D5AF6" />
+                                    </svg>
+
+                                    <div>
+                                        <span
+                                            class="mb-2 mt-1 block text-xl font-medium text-jacarta-700 group-hover:text-accent dark:text-white font-heading">24/7
+                                            Support</span>
+                                        <div class="nav-link-content hidden">
+                                            <p class="text-jacarta-500 dark:text-jacarta-300">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
+                                                maiores fuga magni
+                                                facilis beatae unde voluptates soluta libero excepturi, tempora
+                                                quibusdam ipsum molestias
+                                                exercitationem modi vel nulla. Animi?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-center overflow-hidden lg:w-[45%] lg:overflow-visible">
+                        <!-- content -->
+                        <div class="tab-content flex-1">
+                            <div class="tab-pane fade show active relative" id="ownership" role="tabpanel"
+                                aria-labelledby="ownership-tab">
+                                <figure class="flex items-center justify-center">
+                                    <img src="./img/whyskilly.webp" alt=""
+                                        class="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600" />
+                                    <img src="./img/why-skkily-3d-element.webp" alt=""
+                                        class="absolute animate-spin-slow" />
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade relative" id="voting-power" role="tabpanel"
+                                aria-labelledby="voting-power-tab">
+                                <figure class="flex items-center justify-center">
+                                    <img src="./img/whyskilly.webp" alt=""
+                                        class="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600" />
+                                    <img src="./img/why-skkily-3d-element.webp" alt=""
+                                        class="absolute animate-spin-slow" />
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade relative" id="rewards-income" role="tabpanel"
+                                aria-labelledby="rewards-income-tab">
+                                <figure class="flex items-center justify-center">
+                                    <img src="./img/whyskilly.webp" alt=""
+                                        class="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600" />
+                                    <img src="./img/why-skkily-3d-element.webp" alt=""
+                                        class="absolute animate-spin-slow" />
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade relative" id="complete-decentralization" role="tabpanel"
+                                aria-labelledby="complete-decentralization-tab">
+                                <figure class="flex items-center justify-center">
+                                    <img src="./img/whyskilly.webp" alt=""
+                                        class="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600" />
+                                    <img src="./img/why-skkily-3d-element.webp" alt=""
+                                        class="absolute animate-spin-slow" />
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade relative" id="nft-yield-farming" role="tabpanel"
+                                aria-labelledby="nft-yield-farming-tab">
+                                <figure class="flex items-center justify-center">
+                                    <img src="./img/whyskilly.webp" alt=""
+                                        class="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600" />
+                                    <img src="./img/why-skkily-3d-element.webp" alt=""
+                                        class="absolute animate-spin-slow" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end benefits -->
+
+        <!-- Process / Newsletter -->
+        <section class="relative py-24 dark:bg-jacarta-900">
+            <div class="container">
+                <h2 class="mb-16 text-center font-display text-3xl text-jacarta-700 dark:text-white">
+                    Create and sell your NFTs
+                </h2>
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="text-center">
+                        <div class="mb-6 inline-flex rounded-full bg-[#CDBCFF] p-3">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-5 w-5 fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M22 6h-7a6 6 0 1 0 0 12h7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2zm-7 2h8v8h-8a4 4 0 1 1 0-8zm0 3v2h3v-2h-3z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="mb-4 font-display text-lg text-jacarta-700 dark:text-white">1. Set up your wallet
+                        </h3>
+                        <p class="dark:text-jacarta-300">
+                            Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                            Marketplacein the top
+                            right corner.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-6 inline-flex rounded-full bg-[#C4F2E3] p-3">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-5 w-5 fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="mb-4 font-display text-lg text-jacarta-700 dark:text-white">2. Create Your Collection
+                        </h3>
+                        <p class="dark:text-jacarta-300">
+                            Click Create and set up your collection. Add social links, a description, profile & banner
+                            images, and
+                            set a secondary sales fee.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-6 inline-flex rounded-full bg-[#CDDFFB] p-3">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-5 w-5 fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M17.409 19c-.776-2.399-2.277-3.885-4.266-5.602A10.954 10.954 0 0 1 20 11V3h1.008c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3H6V1h2v4H4v7c5.22 0 9.662 2.462 11.313 7h2.096zM18 1v4h-8V3h6V1h2zm-1.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="mb-4 font-display text-lg text-jacarta-700 dark:text-white">3. Add Your NFTs</h3>
+                        <p class="dark:text-jacarta-300">
+                            Upload your work (image, video, audio, or 3D art), add a title and description, and
+                            customize your NFTs
+                            with properties, stats.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-6 inline-flex rounded-full bg-[#FFD0D0] p-3">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    class="h-5 w-5 fill-white">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path
+                                        d="M10.9 2.1l9.899 1.415 1.414 9.9-9.192 9.192a1 1 0 0 1-1.414 0l-9.9-9.9a1 1 0 0 1 0-1.414L10.9 2.1zm2.828 8.486a2 2 0 1 0 2.828-2.829 2 2 0 0 0-2.828 2.829z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="mb-4 font-display text-lg text-jacarta-700 dark:text-white">4. List Them For Sale
+                        </h3>
+                        <p class="dark:text-jacarta-300">
+                            Choose between auctions, fixed-price listings, and declining-price listings. You choose how
+                            you want to
+                            sell your NFTs!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end process / newsletter -->
+
+        <!-- Post -->
+        <section class="relative py-16 md:py-24">
+            <div class="container">
+                <header class="mx-auto mb-16 max-w-2xl text-center">
+                    <div class="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
+                        <span class="inline-flex flex-wrap items-center space-x-1 text-accent">
+                            <a href="case-studies.html">CONTENT MARKETING</a>
+                            <a href="case-studies.html">PPC</a>
+                        </span>
+                    </div>
+
+                    <h1 class="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-5xl">
+                        Which cryptocurrency has highest potential in future growth?
+                    </h1>
+                </header>
+
+                <!-- Featured image -->
+                <figure class="mb-4">
+                    <img src="img/case-studies/single_case_study_featured.jpg" alt="post 1"
+                        class="w-full rounded-2.5xl" />
+                </figure>
+
+                <!-- Article -->
+                <article>
+                    <div class="lg:flex lg:space-x-8">
+                        <div class="mt-12 lg:w-1/3">
+                            <div class="mb-7">
+                                <h3 class="font-display text-md font-semibold text-jacarta-700 dark:text-white">Industry
+                                </h3>
+                                <span class="text-2xs font-medium dark:text-jacarta-300">Cryptocurency, Digital</span>
+                            </div>
+                            <div class="mb-7">
+                                <h3 class="font-display text-md font-semibold text-jacarta-700 dark:text-white">Services
+                                    Provided</h3>
+                                <span class="text-2xs font-medium dark:text-jacarta-300">Content Marketing, PPC</span>
+                            </div>
+                            <div class="mb-7">
+                                <h3 class="font-display text-md font-semibold text-jacarta-700 dark:text-white">Area
+                                    Served</h3>
+                                <span class="text-2xs font-medium dark:text-jacarta-300">Worldwide</span>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="article-content lg:w-2/3">
+                            <h2 class="text-3xl">The Challenge</h2>
+                            <p class="text-lg leading-normal">
+                                As you may already know, there are an infinite number of things you can test on your
+                                site to help you
+                                increase sales.
+                            </p>
+                            <p>
+                                From layout to copy to design, there are limitless combinations of changes that may
+                                improve your
+                                visitor-to-sale conversion rate. But what's "enough" when you're just starting out? What
+                                elements
+                                should you focus on testing before rolling out your traffic campaign? Changes that may
+                                improve your
+                                visitor-to-sale conversion rate. But what's "enough" when you're just starting out? What
+                                elements
+                                should you focus on testing before rolling out your traffic campaign?
+                            </p>
+                            <p>
+                                Enthusiasm, commitment and a long list of satisfied clients wasn’t enough for Reborn to
+                                achieve the
+                                growth they wanted. To get ahead of the competition, they partnered with OMG on a
+                                digital solution
+                                engineered for market success.
+                            </p>
+                            <h3 class="text-xl">Key problems</h3>
+                            <ul>
+                                <li>Wanting to boost domain authority to dominate fierce market competition</li>
+                                <li>Create a site structure that will enhance SEO</li>
+                                <li>Onsite optimisation to make their website appeal to both search engines and users
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- end post -->
+
+
+        <!-- Approach -->
+        <section class="relative py-20 dark:bg-jacarta-800 lg:py-32">
+            <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
+                <img src="img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+            </picture>
+            <div class="container">
+                <div class="lg:flex lg:items-center lg:justify-between">
+                    <!-- Image -->
+                    <div class="relative lg:w-1/2">
+                        <img src="img/patterns/pattern_circle_1.png"
+                            class="absolute -bottom-4 -left-8 animate-fly dark:opacity-10" alt="" />
+                        <img src="img/patterns/pattern_circle_2.png"
+                            class="absolute -top-14 right-0 animate-fly dark:opacity-10 md:-right-12" alt="" />
+                        <div class="flex items-center space-x-7">
+                            <figure class="relative">
+                                <img src="img/case-studies/single_case_study_approach.jpg" class="rounded-3xl" alt="" />
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="py-10 lg:w-1/2 lg:pl-20">
+                        <h2 class="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">Our Approach</h2>
+                        <p class="mb-8 dark:text-jacarta-300">
+                            SEO was about achieving significant uplifts in rankings, traffic, and revenue. They were
+                            ambitious in
+                            becoming the market leader online for advertising agencies. To achieve their version of
+                            success we
+                            customised a 24 month campaign. The core strategy leveraged:
+                        </p>
+                        <ul class="list-disc space-y-4 pl-4 dark:text-jacarta-300">
+                            <li>Optimising the website and content structure to improve the SEO ranking of their website
+                            </li>
+                            <li>Cutting edge technical onsite optimisation to streamline search and website performance
+                            </li>
+                            <li>Get more high authority and traffic driving links by increasing domain authority</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end approach -->
+
+        <!-- Testimonials -->
+        <section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-cover bg-center"
+            style="background-image: url('img/section2_background.svg');">
+            <div
+                class="container relative overflow-hidden xl:left-[calc((100vw-1202px)/4)] xl:max-w-[calc(1202px+((100vw-1202px)/2))] xl:pr-[calc((100vw-1176px)/2)]">
+                <div class="mx-auto mb-12 max-w-sm text-center">
+                    <h2 class="mb-6 text-center text-3xl font-medium text-jacarta-700 dark:text-white font-heading">
+                        Millions of Users Around the World
+                    </h2>
+                    <p class="text-lg dark:text-jacarta-300">100k+ Customers those who already tried Skkily.</p>
+                </div>
+
+                <!-- Slider -->
+                <div class="swiper card-slider-2-columns xl:!overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div
+                                class="flex flex-wrap gap-5 rounded-2.5xl border border-jacarta-100 bg-white p-12 dark:border-transparent dark:bg-jacarta-700 lg:flex-nowrap">
+                                <img src="img/testimonials/testimonial_1.webp" alt=""
+                                    class="self-start rounded-2.5xl lg:w-auto slider-img" />
+                                <div
+                                    class="-ml-14 -mt-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[5px] border-white bg-accent dark:border-jacarta-700 md:mb-0 md:w-16">
+                                    <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="fill-white">
+                                        <path
+                                            d="M6.027 18.096c-.997 0-1.813-.204-2.448-.612a5.147 5.147 0 01-1.564-1.564 5.729 5.729 0 01-.952-2.38C.927 12.679.86 11.976.86 11.432c0-2.221.567-4.239 1.7-6.052C3.693 3.567 5.461 2.093 7.863.96l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224zm11.56 0c-.997 0-1.813-.204-2.448-.612a5.148 5.148 0 01-1.564-1.564 5.73 5.73 0 01-.952-2.38c-.136-.861-.204-1.564-.204-2.108 0-2.221.567-4.239 1.7-6.052 1.134-1.813 2.902-3.287 5.304-4.42l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224z" />
+                                    </svg>
+                                </div>
+
+                                <div class="mb-4 md:mb-0">
+                                    <div class="-ml-1 mb-3 flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-md leading-normal text-jacarta-700 dark:text-white">
+                                        I absolutely love Skkily! The games are fun and addictive, and I enjoy playing
+                                        with my friends
+                                        online. The tournaments add an extra layer of excitement.
+                                        <span
+                                            class="mt-6 block text-sm font-medium text-jacarta-700 dark:text-white comment-person">Sarah
+                                            R</span>
+                                        <span
+                                            class="text-2xs font-medium tracking-tight dark:text-jacarta-400 comment-subtext">Entrepreneur
+                                            /
+                                            Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="flex flex-wrap gap-5 rounded-2.5xl border border-jacarta-100 bg-white p-12 dark:border-transparent dark:bg-jacarta-700 lg:flex-nowrap">
+                                <img src="img/testimonials/testimonial_2.webp" alt=""
+                                    class="slider-img self-start rounded-2.5xl lg:w-auto" />
+                                <div
+                                    class="-ml-14 -mt-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[5px] border-white bg-accent dark:border-jacarta-700 md:mb-0 md:w-16">
+                                    <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="fill-white">
+                                        <path
+                                            d="M6.027 18.096c-.997 0-1.813-.204-2.448-.612a5.147 5.147 0 01-1.564-1.564 5.729 5.729 0 01-.952-2.38C.927 12.679.86 11.976.86 11.432c0-2.221.567-4.239 1.7-6.052C3.693 3.567 5.461 2.093 7.863.96l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224zm11.56 0c-.997 0-1.813-.204-2.448-.612a5.148 5.148 0 01-1.564-1.564 5.73 5.73 0 01-.952-2.38c-.136-.861-.204-1.564-.204-2.108 0-2.221.567-4.239 1.7-6.052 1.134-1.813 2.902-3.287 5.304-4.42l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224z" />
+                                    </svg>
+                                </div>
+
+                                <div class="mb-4 md:mb-0">
+                                    <div class="-ml-1 mb-3 flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-md leading-normal text-jacarta-700 dark:text-white">
+                                        Skkily has become my go-to gaming app. The customizable game settings allow me
+                                        to play the way I
+                                        want, and the easy real cash rewards are a nice bonus.
+                                    </p>
+                                    <span
+                                        class="mt-6 block text-sm font-medium text-jacarta-700 dark:text-white comment-person">Alex
+                                        M</span>
+                                    <span
+                                        class="text-2xs font-medium tracking-tight dark:text-jacarta-400 comment-subtext">General
+                                        Partner at
+                                        Entrepreneur</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="flex flex-wrap gap-5 rounded-2.5xl border border-jacarta-100 bg-white p-12 dark:border-transparent dark:bg-jacarta-700 lg:flex-nowrap">
+                                <img src="img/testimonials/testimonial_3.webp" alt=""
+                                    class="self-start rounded-2.5xl lg:w-auto slider-img" />
+                                <div
+                                    class="-ml-14 -mt-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[5px] border-white bg-accent dark:border-jacarta-700 md:mb-0 md:w-16">
+                                    <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="fill-white">
+                                        <path
+                                            d="M6.027 18.096c-.997 0-1.813-.204-2.448-.612a5.147 5.147 0 01-1.564-1.564 5.729 5.729 0 01-.952-2.38C.927 12.679.86 11.976.86 11.432c0-2.221.567-4.239 1.7-6.052C3.693 3.567 5.461 2.093 7.863.96l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224zm11.56 0c-.997 0-1.813-.204-2.448-.612a5.148 5.148 0 01-1.564-1.564 5.73 5.73 0 01-.952-2.38c-.136-.861-.204-1.564-.204-2.108 0-2.221.567-4.239 1.7-6.052 1.134-1.813 2.902-3.287 5.304-4.42l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224z" />
+                                    </svg>
+                                </div>
+
+                                <div class="mb-4 md:mb-0">
+                                    <div class="-ml-1 mb-3 flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-md leading-normal text-jacarta-700 dark:text-white">
+                                        As a competitive gamer, I appreciate the big tournaments that Skkily offers. The
+                                        percentage for
+                                        players is fair. Skkily has
+                                        definitely raised the bar for online gaming!
+                                    </p>
+                                    <span
+                                        class="mt-6 block text-sm font-medium text-jacarta-700 dark:text-white comment-person">Jack
+                                        L</span>
+                                    <span
+                                        class="text-2xs font-medium tracking-tight dark:text-jacarta-400 comment-subtext">Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="flex flex-wrap gap-5 rounded-2.5xl border border-jacarta-100 bg-white p-12 dark:border-transparent dark:bg-jacarta-700 lg:flex-nowrap">
+                                <img src="img/testimonials/testimonial_4.webp" alt=""
+                                    class="self-start rounded-2.5xl lg:w-auto slider-img" />
+                                <div
+                                    class="-ml-14 -mt-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[5px] border-white bg-accent dark:border-jacarta-700 md:mb-0 md:w-16">
+                                    <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="fill-white">
+                                        <path
+                                            d="M6.027 18.096c-.997 0-1.813-.204-2.448-.612a5.147 5.147 0 01-1.564-1.564 5.729 5.729 0 01-.952-2.38C.927 12.679.86 11.976.86 11.432c0-2.221.567-4.239 1.7-6.052C3.693 3.567 5.461 2.093 7.863.96l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224zm11.56 0c-.997 0-1.813-.204-2.448-.612a5.148 5.148 0 01-1.564-1.564 5.73 5.73 0 01-.952-2.38c-.136-.861-.204-1.564-.204-2.108 0-2.221.567-4.239 1.7-6.052 1.134-1.813 2.902-3.287 5.304-4.42l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224z" />
+                                    </svg>
+                                </div>
+
+                                <div class="mb-4 md:mb-0">
+                                    <div class="-ml-1 mb-3 flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-md leading-normal text-jacarta-700 dark:text-white">
+                                        I love the mission of Skkily to bring people together through gaming. The
+                                        community is friendly
+                                        and welcoming, and I've made some great friends through the app.
+                                        <span
+                                            class="mt-6 block text-sm font-medium text-jacarta-700 dark:text-white comment-person">Emily
+                                            S</span>
+                                        <span
+                                            class="text-2xs font-medium tracking-tight dark:text-jacarta-400 comment-subtext">Gamer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="flex flex-wrap gap-5 rounded-2.5xl border border-jacarta-100 bg-white p-12 dark:border-transparent dark:bg-jacarta-700 lg:flex-nowrap">
+                                <img src="img/testimonials/testimonial_5.webp" alt=""
+                                    class="self-start rounded-2.5xl lg:w-auto slider-img" />
+                                <div
+                                    class="-ml-14 -mt-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[5px] border-white bg-accent dark:border-jacarta-700 md:mb-0 md:w-16">
+                                    <svg width="22" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="fill-white">
+                                        <path
+                                            d="M6.027 18.096c-.997 0-1.813-.204-2.448-.612a5.147 5.147 0 01-1.564-1.564 5.729 5.729 0 01-.952-2.38C.927 12.679.86 11.976.86 11.432c0-2.221.567-4.239 1.7-6.052C3.693 3.567 5.461 2.093 7.863.96l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224zm11.56 0c-.997 0-1.813-.204-2.448-.612a5.148 5.148 0 01-1.564-1.564 5.73 5.73 0 01-.952-2.38c-.136-.861-.204-1.564-.204-2.108 0-2.221.567-4.239 1.7-6.052 1.134-1.813 2.902-3.287 5.304-4.42l.612 1.224c-1.405.59-2.606 1.519-3.604 2.788-1.042 1.27-1.564 2.561-1.564 3.876 0 .544.068 1.02.204 1.428a3.874 3.874 0 012.516-.884c1.179 0 2.199.385 3.06 1.156.862.77 1.292 1.836 1.292 3.196 0 1.27-.43 2.312-1.292 3.128-.861.816-1.881 1.224-3.06 1.224z" />
+                                    </svg>
+                                </div>
+
+                                <div class="mb-4 md:mb-0">
+                                    <div class="-ml-1 mb-3 flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24" class="h-5 w-5 fill-orange">
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="text-md leading-normal text-jacarta-700 dark:text-white">
+                                        The instant withdrawals on Skkily are a game-changer! Being able to access my
+                                        winnings quickly
+                                        and easily has made my gaming experience even more enjoyable.
+                                        <span
+                                            class="mt-6 block text-sm font-medium text-jacarta-700 dark:text-white comment-person">Ryan
+                                            D</span>
+                                        <span
+                                            class="text-2xs font-medium tracking-tight dark:text-jacarta-400 comment-subtext">Entrepreneur</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider dots -->
+                <div class="swiper-pagination mt-10 text-center"></div>
+            </div>
+        </section>
+        <!-- end testimonials -->
+
+        <!-- Hot Bids -->
+        <section class="pt-20 pb-24">
+            <div class="container">
+                <h2 class="mb-8 text-center font-display text-3xl text-jacarta-700 dark:text-white">
+                    <span class="mr-1 inline-block h-6 w-6 bg-contain bg-center text-xl" style="
+                background-image: url(https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/64/1f525.png);
+              "></span>
+                    Hot Bids
+                </h2>
+
+                <div class="relative">
+                    <!-- Slider -->
+                    <div class="swiper card-slider-4-columns !py-5">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure>
+                                            <a href="item.html">
+                                                <img src="./img/products/item_1.jpg" alt="item 1" width="230"
+                                                    height="230" class="w-full rounded-[0.625rem]" loading="lazy" />
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">ETH
+                                                    Me Outside</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">1.55
+                                                    ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">1.3 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">159</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure>
+                                            <a href="item.html">
+                                                <img src="./img/products/item_2.jpg" alt="item 2" width="230"
+                                                    height="230" class="w-full rounded-[0.625rem]" loading="lazy" />
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">Lazyone
+                                                    Panda</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">2 ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">0.001 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">75</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure>
+                                            <a href="item.html">
+                                                <img src="./img/products/item_6.jpg" alt="item 6" width="230"
+                                                    height="230" class="w-full rounded-[0.625rem]" loading="lazy" />
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">Splendid
+                                                    Girl</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">5.1
+                                                    ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">4.7 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">253</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure>
+                                            <a href="item.html">
+                                                <img src="./img/products/item_4.jpg" alt="item 4" width="230"
+                                                    height="230" class="w-full rounded-[0.625rem]" loading="lazy" />
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">Amazing
+                                                    NFT art</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">7 ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">1.2 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">324</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure class="relative">
+                                            <a href="item.html">
+                                                <img src="./img/pixel.jpg" data-src="./img/products/item_3.gif"
+                                                    alt="item 3" width="230" height="230"
+                                                    class="swiper-lazy w-full rounded-[0.625rem]" />
+                                                <div class="swiper-lazy-preloader"></div>
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">Portrait
+                                                    Gallery</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">0.7
+                                                    ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">0.05 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">54</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div
+                                        class="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                        <figure class="relative">
+                                            <a href="item.html">
+                                                <img src="./img/pixel.jpg" data-src="./img/products/item_5.jpg"
+                                                    alt="item 5" width="230" height="230"
+                                                    class="swiper-lazy w-full rounded-[0.625rem]" />
+                                                <div class="swiper-lazy-preloader"></div>
+                                            </a>
+                                        </figure>
+                                        <div class="mt-4 flex items-center justify-between">
+                                            <a href="item.html">
+                                                <span
+                                                    class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">Flourishing
+                                                    Cat #180</span>
+                                            </a>
+                                            <span
+                                                class="flex items-center whitespace-nowrap rounded-md border border-jacarta-100 py-1 px-2 dark:border-jacarta-600">
+                                                <span data-tippy-content="ETH">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                                        viewBox="0 0 1920 1920" xml:space="preserve" class="h-4 w-4">
+                                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z" />
+                                                        <path fill="#62688F"
+                                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z" />
+                                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z" />
+                                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z" />
+                                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm font-medium tracking-tight text-green">3 ETH</span>
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 text-sm">
+                                            <span class="dark:text-jacarta-300">Current Bid</span>
+                                            <span class="text-jacarta-700 dark:text-jacarta-100">0.25 ETH</span>
+                                        </div>
+
+                                        <div class="mt-8 flex items-center justify-between">
+                                            <button type="button" class="font-display text-sm font-semibold text-accent"
+                                                data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                                                Place bid
+                                            </button>
+                                            <div class="flex items-center space-x-1">
+                                                <span
+                                                    class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
+                                                    data-tippy-content="Favorite">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24"
+                                                        class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                        <path fill="none" d="M0 0H24V24H0z" />
+                                                        <path
+                                                            d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                                                    </svg>
+                                                </span>
+                                                <span class="text-sm dark:text-jacarta-200">125</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Navigation -->
+                    <div
+                        class="swiper-button-prev swiper-button-prev-1 group absolute top-1/2 -left-4 z-10 -mt-6 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white p-3 text-base shadow-white-volume sm:-left-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            class="fill-jacarta-700 group-hover:fill-accent">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z" />
+                        </svg>
+                    </div>
+                    <div
+                        class="swiper-button-next swiper-button-next-1 group absolute top-1/2 -right-4 z-10 -mt-6 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white p-3 text-base shadow-white-volume sm:-right-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            class="fill-jacarta-700 group-hover:fill-accent">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hot bids -->
+
+        <!-- Footer -->
+        <footer class="page-footer bg-white dark:bg-jacarta-900">
+            <div class="container">
+                <div class="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">
+                    <div class="col-span-full sm:col-span-3 md:col-span-4">
+                        <!-- Logo -->
+                        <a href="index.html" class="mb-6 inline-block">
+                            <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Skkily" />
+                            <img src="img/Skkily-logo.webp" class="hidden max-h-7 dark:block" alt="Skkily" />
+                        </a>
+                        <p class="mb-2  text-jacarta-700 dark:text-white">
+                            DISCLAIMER:
+                        </p>
+                        <p class="mb-12 dark:text-jacarta-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Temporibus,
+                            non ex, expedita labore error ut nostrum aliquam sapiente soluta velit a obcaecati.</p>
+                        <!-- Socials -->
+                        <div class="flex space-x-5">
+                            <a href="#" class="group" aria-label="facebook">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+                                    class="h-5 w-5 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="group" aria-label="twitter">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                                    class="h-5 w-5 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="group" aria-label="discord">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord"
+                                    class="h-5 w-5 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                    <path
+                                        d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="group" aria-label="instagram">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                                    class="h-5 w-5 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="group" aria-label="tiktok">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tiktok"
+                                    class="h-5 w-5 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full sm:col-span-3 md:col-span-2 md:col-start-7">
+                        <h3 class="mb-6 text-sm text-jacarta-700 dark:text-white">Conditions</h3>
+                        <ul class="flex flex-col space-y-1 dark:text-jacarta-300">
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-full sm:col-span-3 md:col-span-2">
+                        <h3 class="mb-6 text-sm text-jacarta-700 dark:text-white">Features</h3>
+                        <ul class="flex flex-col space-y-1 dark:text-jacarta-300">
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Career Option</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Games Available</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Featured On</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Promoted By</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-full sm:col-span-3 md:col-span-2">
+                        <h3 class="mb-6 text-sm text-jacarta-700 dark:text-white">Skkilly</h3>
+                        <ul class="flex flex-col space-y-1 dark:text-jacarta-300">
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">DEMO</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-accent dark:hover:text-white">Skkilly Games</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
+                    <span class="text-sm dark:text-jacarta-400">&copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        Skkily — Made by
+                        <a href="" class="hover:text-accent">GoProtoz</a>
+                    </span>
+                    <ul class="flex flex-wrap space-x-4 text-sm dark:text-jacarta-400">
+                        <li>
+                            <a href="#" class="hover:text-accent">Terms and conditions</a>
+                        </li>
+                        <li><a href="#" class="hover:text-accent">Privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JS Scripts -->
+        <script src="./js/app.bundle.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- JS Scripts -->
+
+        <script>
+            const ratingInputs = document.querySelectorAll('.rating input');
+            const selectedRating = document.getElementById('selected-rating');
+            const progressBarFills = document.querySelectorAll('.progress-bar-fill');
+
+            ratingInputs.forEach(input => {
+                input.addEventListener('click', function () {
+                    selectedRating.textContent = this.value;
+                    const currentRating = parseInt(this.value);
+                    for (let i = 0; i < currentRating; i++) {
+                        progressBarFills[i].style.width = '100%';
+                    }
+                    for (let i = currentRating; i < 5; i++) {
+                        progressBarFills[i].style.width = '0';
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>
